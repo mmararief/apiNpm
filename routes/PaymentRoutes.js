@@ -32,9 +32,7 @@ router.post("/process-transaction", (req, res) => {
 
         res.status(200).json({message: "berhasil", dataPayment, token: token})
         })
-        
-
-        
+           
 
     }catch (error){
         res.status(500).json({message: error.message})
