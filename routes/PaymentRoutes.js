@@ -12,9 +12,11 @@ router.post("/process-transaction", (req, res) => {
             clientkey: "Mid-client-1w_hoQvcRMGZuXA5",
         })
 
+        console.log(req);
+
         const parameter = {
             transaction_details: {
-                order_id: req.order_id,
+                order_id: req.body.order_id,
                 gross_amount: req.body.total
             },
             customer_details: {
