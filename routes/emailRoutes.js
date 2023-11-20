@@ -8,11 +8,11 @@ const Mailgen = require('mailgen');
 const getemail = (req, res) => {
     const {
       email,
-      nama,
+      name,
       total
     } = req.body;
 
-    console.log(email,nama,total)
+    console.log(email,name,total)
   
 
     const config = {
@@ -36,14 +36,14 @@ const getemail = (req, res) => {
   
       let response = {
         body: {
-          name: nama,
+          name: name,
           intro: 'Thank you for registration',
           table: [
             {
               title: 'information Payment',
               data: [
                 {
-                  name: nama, // Include the newly generated ID in the email
+                  name: name, // Include the newly generated ID in the email
                   total: total
                 }
               ]
