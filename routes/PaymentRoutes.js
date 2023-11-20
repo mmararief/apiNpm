@@ -7,9 +7,9 @@ const router = express.Router()
 router.post("/process-transaction", (req, res) => {
     try{
         const snap = new midtransClient.Snap({
-            isProduction: false,
-            serverKey: "SB-Mid-server-kTU-XrUBkcjUdGwiCjAQPjxd",
-            clientkey: "SB-Mid-client-DzVbx68_qEYH-c4Y",
+            isProduction: true,
+            serverKey: "Mid-server-ghl2e7gz9cTrYx_xD3gV3-s3",
+            clientkey: "Mid-client-1w_hoQvcRMGZuXA5",
         })
 
         const parameter = {
