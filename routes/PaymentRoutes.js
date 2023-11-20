@@ -14,7 +14,7 @@ router.post("/process-transaction", (req, res) => {
 
         const parameter = {
             transaction_details: {
-                order_id: uniqid(),
+                order_id: req.order_id,
                 gross_amount: req.body.total
             },
             customer_details: {
