@@ -1,6 +1,6 @@
 const express = require('express');
 const midtransClient = require('midtrans-client');
-
+var uniqid = require('uniqid'); 
 
 const router = express.Router()
 
@@ -14,7 +14,7 @@ router.post("/process-transaction", (req, res) => {
 
         const parameter = {
             transaction_details: {
-                order_id: req.body.order_id,
+                order_id: uniqid(),
                 gross_amount: req.body.total
             },
             customer_details: {
