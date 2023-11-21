@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.get('/api/mahasiswa/:npm', async (req, res) => {
   const npm = req.params.npm;
-
   try {
     const tableData = await scrapeTableData(npm);
     res.json(tableData);
