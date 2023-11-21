@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 const PaymentRoutes = require("./routes/PaymentRoutes.js")
-const emailRoutes = require("./routes/emailRoutes.js")
+const notification = require("./routes/notification.js")
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -21,7 +21,7 @@ app.get('/api/mahasiswa/:npm', async (req, res) => {
   }
 });
 app.use("/api/payment", PaymentRoutes)
-app.use("/api/checkout", emailRoutes)
+app.use("/api/midtrans", notification)
 
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
