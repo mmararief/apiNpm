@@ -3,7 +3,7 @@ const scrapeTableData = require('./scraper');
 const bodyParser = require("body-parser")
 const cors = require('cors');
 const app = express();
-const port = 5000;
+const port =  process.env.PORT || 5000;
 const PaymentRoutes = require("./routes/PaymentRoutes.js")
 const notification = require("./routes/notification.js")
 
