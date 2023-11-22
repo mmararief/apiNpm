@@ -7,9 +7,9 @@ const router = express.Router();
 
 router.post("/notification", async (req, res) => {
     let apiClient = new midtransClient.Snap({
-        isProduction: false,
-        serverKey: 'SB-Mid-server-kTU-XrUBkcjUdGwiCjAQPjxd',
-        clientKey: 'SB-Mid-client-DzVbx68_qEYH-c4Y'
+        isProduction: true,
+        serverKey: 'Mid-server-ghl2e7gz9cTrYx_xD3gV3-s3',
+        clientKey: 'Mid-client-1w_hoQvcRMGZuXA5'
     });
 
     const notificationJson = req.body;
