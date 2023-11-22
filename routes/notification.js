@@ -49,6 +49,16 @@ router.post("/notification", async (req, res) => {
     }
 });
 
+router.get('/getuser', async(req, res) => {
+    const users = await prisma.userPayment.findMany({
+        where: {
+          payment_status: "success",
+        },
+      })
+
+      res.json(users)
+} )
+
 async function updatePaymentStatus(orderId, status) {
     // Update the corresponding record in the database with the given status
     await prisma.userPayment.update({

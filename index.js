@@ -20,7 +20,7 @@ app.get('/api/mahasiswa/:npm', async (req, res) => {
   }
 });
 app.use("/api/payment", PaymentRoutes)
-app.use("/api/midtrans", notification)
+app.use("/api/midtrans", notification )
 
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
