@@ -58,7 +58,7 @@ const getemail = (req, res) => {
       const message = {
         from: 'ammararief321@gmail.com',
         to: email,
-        subject: 'Segera Melakukan Pembayaran',
+        subject: 'Terima Kasih telah mendaftar sebagai penonton dalam kompetisi big1boxing.',
         html: mail
       };
   
