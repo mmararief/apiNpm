@@ -50,7 +50,7 @@ router.post("/notification", async (req, res) => {
 });
 
 router.get('/getuser', async(req, res) => {
-    const users = await prisma.userBoxing.findMany({
+    const users = await prisma.userPayment.findMany({
         where: {
           payment_status: "success",
         },
@@ -60,7 +60,7 @@ router.get('/getuser', async(req, res) => {
 } )
 
 router.get('/getuserboxing', async(req, res) => {
-    const users = await prisma.userPayment.findMany()
+    const users = await prisma.userBoxing.findMany()
 
       res.json(users)
 } )
